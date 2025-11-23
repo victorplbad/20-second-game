@@ -37,40 +37,19 @@ public class Spawner : MonoBehaviour
                     haveSpawnedReal = true;
                 }
                 
-                else if (diceroll <= 11 || diceroll <= 340)
+                else if (diceroll <= 11 || diceroll <= 999)
                 {
+
+                    SpawnRando();
                     
-                    foulder = Instantiate(foulder, transform.parent = thisParent);
-                    
                 }
-                else if (diceroll <= 341 || diceroll <= 670)
-                {
-                    browser = Instantiate(browser, transform.parent = thisParent);
-                }
-                else if (diceroll <= 671 || diceroll <= 999)
-                {
-                    picture = Instantiate(picture, transform.parent = thisParent);
-                }
+               
 
             }
             else
             {
-                diceroll = Random.Range(0, 3);
-                                    //Debug.Log(diceroll + " after real");
 
-                if (diceroll == 0)
-                {
-                    foulder = Instantiate(foulder, transform.parent = thisParent);
-                }
-                else if (diceroll == 1)
-                {
-                    browser = Instantiate(browser, transform.parent = thisParent);
-                }
-                else if (diceroll == 2)
-                {
-                    picture = Instantiate(picture, transform.parent = thisParent);
-                }
-
+                SpawnRando();
             }
 
             count++;
@@ -83,18 +62,7 @@ public class Spawner : MonoBehaviour
         }
         else
         {
-            if (diceroll == 0)
-            {
-                foulder = Instantiate(foulder, transform.parent = thisParent);
-            }
-            else if (diceroll == 1)
-            {
-                browser = Instantiate(browser, transform.parent = thisParent);
-            }
-            else if (diceroll == 2)
-            {
-                picture = Instantiate(picture, transform.parent = thisParent);
-            }
+            SpawnRando();
         }
 
 
@@ -104,6 +72,20 @@ public class Spawner : MonoBehaviour
     void SpawnRando()
     {
 
+        diceroll = Random.Range(0, 3);
+
+        if (diceroll == 0)
+        {
+            foulder = Instantiate(foulder, transform.parent = thisParent);
+        }
+        else if (diceroll == 1)
+        {
+            browser = Instantiate(browser, transform.parent = thisParent);
+        }
+        else if (diceroll == 2)
+        {
+            picture = Instantiate(picture, transform.parent = thisParent);
+        }
 
     }
 
