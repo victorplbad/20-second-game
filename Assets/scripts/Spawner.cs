@@ -8,44 +8,46 @@ public class Spawner : MonoBehaviour
     public GameObject picture;
 
     public GameObject real;
-    public bool haveSpawnedReal = false;
-    public int diceroll;
 
-    public int count = 0;
+    private bool haveSpawnedReal = false;
+    private int diceroll;
+
+    private int count = 0;
+    public int Maxcount = 160;
     
     public Transform thisParent;
+    
 
 
     void Start() // spawn 161 obnjtives and 1 "real"
     {
 
-        while (count <= 162)
+        while (count <= Maxcount)
         {
             if (haveSpawnedReal == false)
             {
 
-                diceroll = Random.Range(0, 4);
-                Debug.Log(diceroll + " before real");
+                diceroll = Random.Range(0, 1000);
+                                    //Debug.Log(diceroll + " before real");
 
-                if (diceroll == 0)
+                if (diceroll <= 1 || diceroll <= 10)
                 {
-                    //clone = Instantiate(real, transform.position, transform.rotation,transform.parent);
-                    //Instantiate(real, thisParents);
+                    
                     real = Instantiate(real, transform.parent = thisParent);
                     haveSpawnedReal = true;
                 }
                 
-                else if (diceroll == 1)
+                else if (diceroll <= 11 || diceroll <= 340)
                 {
                     
                     foulder = Instantiate(foulder, transform.parent = thisParent);
                     
                 }
-                else if (diceroll == 2)
+                else if (diceroll <= 341 || diceroll <= 670)
                 {
                     browser = Instantiate(browser, transform.parent = thisParent);
                 }
-                else if (diceroll == 3)
+                else if (diceroll <= 671 || diceroll <= 999)
                 {
                     picture = Instantiate(picture, transform.parent = thisParent);
                 }
@@ -54,7 +56,7 @@ public class Spawner : MonoBehaviour
             else
             {
                 diceroll = Random.Range(0, 3);
-                Debug.Log(diceroll + " after real");
+                                    //Debug.Log(diceroll + " after real");
 
                 if (diceroll == 0)
                 {
@@ -74,10 +76,44 @@ public class Spawner : MonoBehaviour
             count++;
         }
 
-        
+        if (count == Maxcount || haveSpawnedReal == false)
+        {
+            real = Instantiate(real, transform.parent = thisParent);
+            haveSpawnedReal = true;
+        }
+        else
+        {
+            if (diceroll == 0)
+            {
+                foulder = Instantiate(foulder, transform.parent = thisParent);
+            }
+            else if (diceroll == 1)
+            {
+                browser = Instantiate(browser, transform.parent = thisParent);
+            }
+            else if (diceroll == 2)
+            {
+                picture = Instantiate(picture, transform.parent = thisParent);
+            }
+        }
 
 
     }
+
+
+    void SpawnRando()
+    {
+
+
+    }
+
+    void SpawnReal()
+    {
+
+
+    }
+
+
 
 
 }

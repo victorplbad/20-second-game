@@ -680,7 +680,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 51.3, y: 52}
+  m_CellSize: {x: 61.5, y: 59}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -700,9 +700,7 @@ MonoBehaviour:
   browser: {fileID: 6682534590804957210, guid: 8e72852d49f127b41b3d196def465d9d, type: 3}
   picture: {fileID: 6580169043627869710, guid: ab2d3470455b15943ad40a904e55f271, type: 3}
   real: {fileID: 1781685458310726577, guid: 010e8898baaf6ec419296e0bd3154ab5, type: 3}
-  haveSpawnedReal: 0
-  diceroll: 0
-  count: 0
+  Maxcount: 118
   thisParent: {fileID: 508051670}
 --- !u!1 &519420028
 GameObject:
@@ -2895,7 +2893,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -54, y: 21.6}
+  m_AnchoredPosition: {x: -54, y: 21.59961}
   m_SizeDelta: {x: 90, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1888026947
@@ -3513,7 +3511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7684820630150301552, guid: 010e8898baaf6ec419296e0bd3154ab5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -178.59998
+      value: -178.60156
       objectReference: {fileID: 0}
     - target: {fileID: 7684820630150301552, guid: 010e8898baaf6ec419296e0bd3154ab5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3610,7 +3608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6327568623158509160, guid: bfaace888566607429824c5e17d0e6ac, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -127.30005
+      value: -127.30078
       objectReference: {fileID: 0}
     - target: {fileID: 6327568623158509160, guid: bfaace888566607429824c5e17d0e6ac, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3810,7 +3808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5502054588578637709, guid: 8e72852d49f127b41b3d196def465d9d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -229.90002
+      value: -229.89844
       objectReference: {fileID: 0}
     - target: {fileID: 5502054588578637709, guid: 8e72852d49f127b41b3d196def465d9d, type: 3}
       propertyPath: m_AnchoredPosition.y
